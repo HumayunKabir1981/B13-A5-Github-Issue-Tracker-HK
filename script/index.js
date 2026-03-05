@@ -19,12 +19,16 @@ const btnOpen = () => {
     removeActive();
     const clickBtn = document.getElementById('btn-open')
     clickBtn.classList.add("btn-active")
+loadGithubOpen();
+
 }
 
 const btnClose = () => {
     removeActive();
     const clickBtn = document.getElementById('btn-close')
     clickBtn.classList.add("btn-active")
+
+    loadGithubClosed();
 }
 
 
@@ -64,4 +68,4 @@ const displayGithub = (githubs) => {
     })
 }
 
-loadGithub();
+// loadGithub();
