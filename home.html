@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awsome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- font integration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Hind+Siliguri:wght@300;400;500;600;700&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- daisyUi Tailwind CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- styleSheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>GITHUB ISSUE TRACKER</title>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar bg-base-100 shadow-sm">
+            <div class="flex-1 ml-20">
+                <img class="w-[40px] h-[40px]" src="./assets/github-logo.png" alt="">
+            </div>
+
+            <div class="flex gap-2 mr-12">
+
+                <label class="input flex-1 items-center gap-2 ">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" class="" placeholder="Search issues..." />
+                </label>
+
+                <div class="flex-1">
+                    <button class="btn btn-primary"> <i class="fa-solid fa-plus"></i> New Issue</button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <main class="w-4/6 mx-auto">
+        <div class="mt-16 shadow-lg p-5 rounded-lg">
+            <button class="btn btn-active btn-primary px-14">All</button>
+            <button class="btn btn-outline btn-primary px-12">Open</button>
+            <button class="btn btn-outline btn-primary px-11">Close</button>
+        </div>
+
+
+        <div class="flex justify-between p-5 shadow-sm mt-5">
+            <div class="flex flex-1 gap-5">
+                <img src="./assets/Aperture.png" alt="">
+                <div>
+                    <h3 class="text-xl font-bold "> <span>50</span> Issues</h3>
+                    <p class="text-[#64748B]">Track and manage your project issues</p>
+                </div>
+            </div>
+
+            <div class="flex  gap-5">
+                <div class="flex gap-2 items-center">                    
+                    <i class="fa-solid fa-circle text-green-600"></i>
+                    <p>Open</p>
+                </div>
+                <div class="flex gap-2 items-center">
+                   <i class="fa-solid fa-circle text-purple-700"></i>
+                    <p>Close</p>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+    </main>
+
+
+</body>
+
+</html>
