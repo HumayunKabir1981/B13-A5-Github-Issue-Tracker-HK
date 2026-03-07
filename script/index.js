@@ -43,6 +43,11 @@ const loadGithub = () => {
 
 
 const displayGithub = (githubs) => {
+    const issueCount=document.getElementById('issue-count')
+    issueCount.innerText=githubs.length;
+
+    console.log(githubs.length);
+    
     const githubContainer = document.getElementById('github-container');
     githubContainer.innerHTML = "";
     githubs.forEach(github => {
@@ -58,3 +63,5 @@ const displayGithub = (githubs) => {
         githubContainer.append(githubCard);
     })
 }
+
+loadGithub();
