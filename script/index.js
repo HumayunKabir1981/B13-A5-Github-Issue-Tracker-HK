@@ -68,4 +68,4 @@ const displayGithub = (githubs) => {
     })
 }
 
-// loadGithub();
+ loadGithub();

@@ -1,12 +1,3 @@
-const btnOpen = () => {
-    removeActive();
-    const clickBtn = document.getElementById('btn-open')
-    clickBtn.classList.add("btn-active")
-loadGithubOpen();
-
-}
-
-
 const loadGithubOpen = () => {
     const url = `https://phi-lab-server.vercel.app/api/v1/lab/issues`;
     fetch(url)
@@ -26,7 +17,7 @@ const displayGithubOpen = (githubs) => {
     let openCount = 0;
     githubs.forEach(github => {    
 
-        if (github.status == 'open') {
+        if (github.status == "open") {
             openCount++;
 
             const githubCard = document.createElement('div');
