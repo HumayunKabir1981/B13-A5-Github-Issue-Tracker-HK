@@ -47,7 +47,7 @@ const showDetail=(githubDetail)=>{
     const detailBox=document.getElementById('detail-container');
 detailBox.innerHTML=`
 <h1 class="text-xl font-bold">${githubDetail.title} </h1>
-<span class="bg-green-300 rounded-full py-1 px-6 text-sm font-semibold">open</span>
+<span class="bg-green-300 rounded-full py-1 px-6 text-sm font-semibold">${githubDetail.status}</span>
         <i class="fa-solid fa-circle text-xs"></i>
         <span>open by ${githubDetail.author} </span>     
         <i class="fa-solid fa-circle text-xs"></i>
