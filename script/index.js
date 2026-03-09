@@ -114,7 +114,8 @@ const displayGithub = (githubs) => {
     const issueCount = document.getElementById('issue-count')
     issueCount.innerText = githubs.length;
 
-
+const resultsDiv = document.getElementById('searchText-container');
+    resultsDiv.innerHTML = '';
 
     const githubContainer = document.getElementById('github-container');
     githubContainer.innerHTML = "";

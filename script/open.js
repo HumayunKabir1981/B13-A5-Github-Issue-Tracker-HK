@@ -83,6 +83,9 @@ const showDetailOpen = (githubDetail) => {
 
 const displayGithubOpen = (githubs) => {
 
+    const resultsDiv = document.getElementById('searchText-container');
+    resultsDiv.innerHTML = '';
+
     const githubContainer = document.getElementById('github-container');
     githubContainer.innerHTML = "";
     const issueCount = document.getElementById('issue-count')
