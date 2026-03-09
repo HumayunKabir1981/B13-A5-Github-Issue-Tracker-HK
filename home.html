@@ -58,10 +58,10 @@
         <section>
             <div class="mt-16 shadow-sm p-5 rounded-lg border border-gray-100 
             flex flex-col md:flex-row gap-3 justify-start">
-                <button onclick="btnAll()" id="btn-all"
+                <button onclick="loadGithub()" id="btn-all"
                     class="btn btn-outline  btn-active btn-primary px-14 js-btn">All</button>
-                <button onclick="btnOpen()" id="btn-open" class="btn btn-outline btn-primary px-12 js-btn">Open</button>
-                <button onclick="btnClose()" id="btn-close"
+                <button onclick="loadGithubOpen()" id="btn-open" class="btn btn-outline btn-primary px-12 js-btn">Open</button>
+                <button onclick="loadGithubClosed()" id="btn-close"
                     class="btn btn-outline btn-primary px-11 js-btn">Close</button>
             </div>
         </section>
@@ -90,7 +90,10 @@
                 </div>
             </div>
         </section>
-        <span id="spinner" class="loading loading-spinner text-primary hidden"></span>
+       
+            <span id="spinner" class="loading loading-spinner text-primary loading-xl  hidden"></span>
+       
+
 
         <section id="github-container"
             class=" bg-gray-100  p-5 my-10  grid grid-cols-1 md:grid-cols-3 space-x-5 space-y-5 ">

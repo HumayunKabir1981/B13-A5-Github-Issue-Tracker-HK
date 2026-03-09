@@ -6,7 +6,6 @@ const serachTxt = () => {
 }
 
 const serachBtn = async() => {
-
      const spinner = document.getElementById('spinner');
     spinner.classList.remove('hidden'); 
 
