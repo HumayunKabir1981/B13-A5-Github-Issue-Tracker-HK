@@ -6,32 +6,6 @@ const removeActive = () => {
 
 
 
-// const btnAll = () => {
-//     removeActive();
-//     const clickBtn = document.getElementById('btn-all')
-//     clickBtn.classList.add("btn-active")
-
-//     loadGithub();
-
-// }
-
-// const btnOpen = () => {
-//     removeActive();
-//     const clickBtn = document.getElementById('btn-open')
-//     clickBtn.classList.add("btn-active")
-//     loadGithubOpen();
-
-// }
-
-// const btnClose = () => {
-//     removeActive();
-//     const clickBtn = document.getElementById('btn-close')
-//     clickBtn.classList.add("btn-active")
-
-//     loadGithubClosed();
-// }
-
-
 
 const displayDetail=(id)=>{
      const url = `https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`;
@@ -95,12 +69,7 @@ const loadGithub = async() => {
     spinner.classList.remove('hidden'); 
 
     const url = `https://phi-lab-server.vercel.app/api/v1/lab/issues`;
-    // fetch(url)
-    //     .then(res => res.json())
-    //     .then(data => {
-    //         displayGithub(data.data)
-    //     });
-
+   
  const res = await fetch(url);
     const data = await res.json();
      spinner.classList.add('hidden'); 
@@ -179,8 +148,3 @@ const resultsDiv = document.getElementById('searchText-container');
 
 loadGithub();
 
-// function display(id){
-//      const url = `https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`;
-//     console.log(url);
-    
-// }

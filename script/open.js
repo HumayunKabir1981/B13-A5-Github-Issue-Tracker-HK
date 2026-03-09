@@ -1,22 +1,17 @@
-const loadGithubOpen = async() => {
+const loadGithubOpen = async () => {
 
     removeActive();
     const clickBtn = document.getElementById('btn-open')
     clickBtn.classList.add("btn-active")
 
-     const spinner = document.getElementById('spinner');
-    spinner.classList.remove('hidden'); 
+    const spinner = document.getElementById('spinner');
+    spinner.classList.remove('hidden');
 
     const url = `https://phi-lab-server.vercel.app/api/v1/lab/issues`;
-    // fetch(url)
-    //     .then(res => res.json())
-    //     .then(data => {
-    //         displayGithubOpen(data.data)
-    //     });
 
-        const res = await fetch(url);
+    const res = await fetch(url);
     const data = await res.json();
-     spinner.classList.add('hidden'); 
+    spinner.classList.add('hidden');
     displayGithubOpen(data.data)
 
 }
@@ -70,8 +65,6 @@ const showDetailOpen = (githubDetail) => {
                     </div>
                    
                 </div>
-
-
 `;
     document.getElementById('my_modal_5').showModal();
 
@@ -145,8 +138,6 @@ const displayGithubOpen = (githubs) => {
         issueCount.innerText = openCount;
 
     })
-
-
 
 
 }

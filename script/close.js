@@ -1,37 +1,32 @@
-const loadGithubClosed = async() => {
-removeActive();
+const loadGithubClosed = async () => {
+    removeActive();
     const clickBtn = document.getElementById('btn-close')
     clickBtn.classList.add("btn-active")
 
-     const spinner = document.getElementById('spinner');
-    spinner.classList.remove('hidden'); 
+    const spinner = document.getElementById('spinner');
+    spinner.classList.remove('hidden');
 
     const url = `https://phi-lab-server.vercel.app/api/v1/lab/issues`;
-    // fetch(url)
-    //     .then(res => res.json())
-    //     .then(data => {
-    //         displayGithubClosed(data.data)
-    //     });
 
-        const res = await fetch(url);
+    const res = await fetch(url);
     const data = await res.json();
-     spinner.classList.add('hidden'); 
-     displayGithubClosed(data.data)
+    spinner.classList.add('hidden');
+    displayGithubClosed(data.data)
 }
 
-const displayDetailClosed=(id)=>{
-     const url = `https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`;
-   
-       fetch(url)
+const displayDetailClosed = (id) => {
+    const url = `https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`;
+
+    fetch(url)
         .then(res => res.json())
-        .then(data =>  {
+        .then(data => {
             showDetailClosed(data.data)
-        });    
+        });
 }
 
-const showDetailClosed=(githubDetail)=>{
-    const detailBox=document.getElementById('detail-container');
-detailBox.innerHTML=`
+const showDetailClosed = (githubDetail) => {
+    const detailBox = document.getElementById('detail-container');
+    detailBox.innerHTML = `
 
 <h1 class="text-xl font-bold">${githubDetail.title} </h1>
 <span class="bg-purple-400 rounded-full py-1 px-6 text-sm font-semibold">${githubDetail.status}</span>
@@ -68,7 +63,7 @@ detailBox.innerHTML=`
 
 
 `;
-document.getElementById('my_modal_5').showModal();
+    document.getElementById('my_modal_5').showModal();
 
 }
 
