@@ -1,4 +1,3 @@
-console.log("search Data");
 
 
 const serachTxt = () => {
@@ -6,21 +5,26 @@ const serachTxt = () => {
     
 }
 
-const serachBtn = () => {
-    const text = serachTxt(); 
-    displaySearchText(text); 
+const serachBtn = async() => {
+
+     const spinner = document.getElementById('spinner');
+    spinner.classList.remove('hidden'); 
+
+    const query = serachTxt();
+    const issues = await displaySearchText(query);
+
+    spinner.classList.add('hidden'); 
+    displaySearchData(issues);
 }
 
 
 
-const displaySearchText = (serachTxt) => {
+const displaySearchText = async (serachTxt) => {
     const url = `https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${serachTxt}`;
       
-    fetch(url)
-        .then(res => res.json())
-        .then(data => {
-             displaySearchData(data.data)
-        });
+   const res = await fetch(url);
+    const data = await res.json();
+    return data.data;
 }
 
 const displaySearchData = (issues) => {
@@ -35,13 +39,12 @@ const displaySearchData = (issues) => {
         resultsDiv.textContent = 'No results found';
         return;
     }
-
-    // প্রতিটা object show করা
+  
     issues.forEach(issue => {
         const div = document.createElement('div');
-        div.classList.add('p-2', 'border', 'my-1', 'rounded', 'bg-gray-50');
+        div.classList.add('p-2', 'border', 'my-1', 'rounded', 'space=y-3','bg-gray-100');
 
-        // object এর প্রতিটি property dynamically দেখানো
+     
         let content = '';
         for (const key in issue) {
             content += `<strong>${key}:</strong> ${issue[key]}<br>`;
