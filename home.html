@@ -42,11 +42,11 @@
 
                 <label class="input flex-1 items-center gap-2 ">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" class="" placeholder="Search issues..." />
+                    <input id="search-text" type="text" class="" placeholder="Search issues..." />
                 </label>
 
                 <div class="flex-1">
-                    <button class="btn btn-primary"> <i class="fa-solid fa-plus"></i> New Issue</button>
+                    <button onclick="serachBtn()" id="search-btn" class="btn btn-primary"> Search</button>
                 </div>
 
             </div>
@@ -97,6 +97,11 @@
 
         </section>
 
+         <section id="searchText-container"
+            class=" bg-gray-100  p-5 my-10  grid grid-cols-1  space-x-5 space-y-5 ">
+
+        </section>
+
     </main>
 
 
@@ -122,6 +127,7 @@
     <script src="./script/index.js"></script>
     <script src="./script/open.js"></script>
     <script src="./script/close.js"></script>
+    <script src="./script/search.js"></script>
 
 </body>
 
