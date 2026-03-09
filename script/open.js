@@ -94,7 +94,7 @@ const displayGithubOpen = (githubs) => {
 
                 <div class="flex justify-between items-center">
                     <img class="h-10 w-10" src="./assets/Open-Status.png" alt="">
-                    <span class="bg-yellow-300 rounded-full py-1 px-6 text-sm font-semibold">${github.priority}</span>
+                    <span class="bg-yellow-200 rounded-full py-1 px-6 text-sm font-semibold">${github.priority}</span>
                 </div>
 
                 <h2 class="text-xl font-bold">
@@ -103,12 +103,12 @@ const displayGithubOpen = (githubs) => {
                 <p class="text-[#64748B]">${github.description} </p>
 
                 <div class="flex gap-3 items-start">
-                    <span class="bg-yellow-300 rounded-full py-1 px-5 flex gap-2 items-center text-sm">
+                    <span class="bg-yellow-200 rounded-full py-1 px-5 flex gap-2 items-center text-sm">
                         <i class="fa-solid fa-bug"></i> ${github.labels[0]}
                     </span>
 
                     ${github.labels[1] ? `
-                    <span class="bg-yellow-500 rounded-full py-1 px-5 flex gap-2 items-center text-sm">
+                    <span class="bg-yellow-400 rounded-full py-1 px-5 flex gap-2 items-center text-sm">
                     <i class="fa-solid fa-life-ring"></i> ${github.labels[1]}
                     </span>
                         ` : ''}
